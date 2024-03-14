@@ -44,6 +44,44 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
+            color: Colors.green,
+            child: const AutoSizeText.rich(
+              //maxFontSize: 40,
+              //minFontSize: 14,
+                presetFontSizes: [40, 20, 14],
+                maxLines: 2,
+              TextSpan(
+                text: 'Flutter Auto Text',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+                children: [
+                  TextSpan(
+                    text: 'Flutter widget that automatically resizes text to fit perfectly within its bounds.',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              )
+              //group: myGroup,
+              //maxLines: 2,
+              //overflow: TextOverflow.ellipsis,
+              //stepGranularity: 20,
+              //minFontSize: 20,
+              //maxFontSize: 60,
+              //presetFontSizes: [40, 20, 14],
+              //'Flutter widget that automatically resizes text to fit perfectly within its bounds.',
+              //style: TextStyle(
+                //fontSize: 60,
+                //color: Colors.white,
+              //),
+            ),
+          ),
+          Container(
             color: Colors.blue,
             child: const AutoSizeText(
               //group: myGroup,
